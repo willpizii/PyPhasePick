@@ -7,3 +7,5 @@ nohup.out
 __pycache__/*
 dev*
 nohup*
+
+!requirements.txt
