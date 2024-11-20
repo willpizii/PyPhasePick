@@ -21,18 +21,18 @@ from EgfLib import calc_and_save_ftan
 #                             Settings                                #
 #######################################################################
 
-stations_csv = "/raid2/jwf39/askja/notebooks/all_stations_sep23.csv"
+stations_csv = "/raid2/wp280/intcc/csvs/all_stations_20_24.csv"
 stationsdf = pd.read_csv(stations_csv)
 
-stationpair_csv = "/raid2/jwf39/askja/notebooks/all_station_pairs_sep23.csv"
+stationpair_csv = "/raid2/wp280/intcc/csvs/all_stations_pairs_20_24.csv"
 stationpairdf = pd.read_csv(stationpair_csv)
 
-egf_dir = "/raid2/jwf39/askja/sep11_sep23/pws"
+egf_dir = "/raid2/wp280/intcc/2020_2024/pws"
 
 vel_type = "phase" # "phase" or "group"
 comp = "ZZ"
 
-net = "AJ"
+net = "RK"
 
 min_dist = 2*3000*2
 snr_threshold = 2.0
@@ -53,7 +53,7 @@ divalpha = 5.0
 
 fSettings = (minT,maxT,dT,bandwidth,width_type,dv,minv,maxv,divalpha)
 
-outdir = f"/raid2/jwf39/askja/sep11_sep23/ftan"
+outdir = f"/raid2/wp280/intcc/2020_2024/ftan"
 
 threads = 15
 

@@ -16,17 +16,17 @@ from EgfLib import FTAN, station_pair_stack, egf_worker, make_stack_jobs
 #######################################################################
 
 if __name__=="__main__":
-    # cc_path_structure = "/raid2/jwf39/askja/STACKS/01/001_DAYS/COMP/NET1_STA1_NET2_STA2/YEAR-MM-DD.MSEED"
-    cc_path_structure = "/raid2/jwf39/askja/ALL_STACKS/COMP/NET1_STA1_NET2_STA2/YEAR-MM-DD.MSEED"
+    cc_path_structure = "/raid2/wp280/intcc/STACKS/01/001_DAYS/COMP/NET1_STA1_NET2_STA2/YEAR-MM-DD.MSEED"
+    # cc_path_structure = "/raid2/wp280/intcc/ALL_STACKS/COMP/NET1_STA1_NET2_STA2/YEAR-MM-DD.MSEED"
 
     # stations_csv = "/raid2/jwf39/askja/notebooks/pre_21_all_stations.csv"
-    stations_csv = "/raid2/jwf39/askja/notebooks/all_stations_sep23.csv"
+    stations_csv = "/raid2/wp280/intcc/csvs/all_stations_20_24.csv"
 
     ignore_network = True
     replacement_net_code = "AJ"
 
-    comps = ("ZZ","RR","TT")
-    # comps = ("ZZ")
+    # comps = ("ZZ","RR","TT")
+    comps = ("ZZ") # don't have stacks for RR or TT yet
     startdate = "1970-01-01" # "2021-08-01" or "1970-01-01"
     enddate = "2035-01-01" # "2021-07-01" or "2035-01-01"
 
@@ -40,10 +40,10 @@ if __name__=="__main__":
 
     #Will save in this directory:
     # outdir = f"/raid1/jwf39/askja/sep11_jul21/pws"
-    outdir = f"/raid2/jwf39/askja/sep11_sep23/pws"
+    outdir = f"/raid2/wp280/intcc/2020_2024/pws"
     # outdir = f"/raid2/jwf39/askja/aug21_sep23/pws"
 
-    threads = 20
+    threads = 8
 
 #######################################################################
 #                               Main                                  #
